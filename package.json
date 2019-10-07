@@ -30,10 +30,13 @@
     "core-js": "^2.4.1",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.15",
     "marked": "^0.7.0",
+    "mixin-deep": "^2.0.1",
     "path": "^0.12.7",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.0.0-rc.0",
+    "set-value": "^3.0.1",
     "typescript": "~3.4.5",
     "zone.js": "~0.9.1"
   },
