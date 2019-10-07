@@ -1,0 +1,15 @@
+@import '../share/scss/highlight.scss';
+
+.note {
+    &-content-block {
+        display: flex;
+        flex-direction: column;
+        span {
+            margin-bottom: 0.25rem;
+        }
+    }
+}
+
+mark {
+  background-color: #FEF2CC;
+}

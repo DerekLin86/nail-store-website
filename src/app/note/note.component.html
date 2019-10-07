@@ -1,0 +1,7 @@
+<ng-container *ngIf="note$ | async as note">
+  <div class="normal-title">
+    <i class="fa fa-bell-o normal-title-icon" aria-hidden="true"></i>
+    <span>{{ note?.title }}</span>
+  </div>
+  <div [innerHTML]="note?.content | mdToHtml" class="note-content-block"></div>
+</ng-container>

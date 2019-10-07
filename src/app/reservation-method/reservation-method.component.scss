@@ -1,0 +1,36 @@
+@import '../share/scss/highlight.scss';
+
+.reservation {
+    &-content-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-top-block {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    &-copy {
+        display: flex;
+        flex-direction: column;
+        &-block {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            & > span {
+                text-decoration: underline;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    &-bottom-block {
+        display: flex;
+        margin-top: 2rem;
+    }
+    &-gap {
+        height: 1rem;
+        width: 100%;
+    }
+}

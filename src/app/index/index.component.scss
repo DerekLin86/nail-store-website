@@ -1,0 +1,87 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+@mixin bootstrapTab {
+    :host ::ng-deep .nav-pills .nav-link.active {
+        background-color: transparent;
+        color: inherit;
+        position: relative;
+        &::after {
+            background-color: #007BFF;
+            border-radius: 6px;
+            bottom: 0;
+            content: '';
+            height: 4px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+};
+
+@mixin mobileView {
+    @include media-breakpoint-down(sm) {
+        .index {
+            &-branding-block {
+                position: relative;
+                background: url('assets/images/branding/branding-mobile.JPG');
+                background-size: cover;
+                span {
+                    bottom: 0;
+                    font-size: 2rem;
+                    left: 0;
+                    margin-left: 1rem;
+                    position: absolute;
+                }
+            }
+            &-content-block {
+                padding: 2rem 5% 0;
+            }
+            &-body-tab-block {
+                padding: 0 1%;
+                .flex-column {
+                    flex-direction: row !important;
+                }
+            }
+        }
+    }
+};
+
+.index {
+    &-branding {
+        &-block {
+            align-items: center;
+            background-color: bisque;
+            display: flex;
+            height: 20rem;
+            justify-content: center;
+            width: 100%;
+            span {
+                color: white;
+                font-family: cursive;
+                font-size: 5rem;
+            }
+        }
+    }
+    &-body {
+        &-tab {
+            cursor: pointer;
+            &-block {
+                padding: 0 30%;
+            }
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+    }
+    &-content-block {
+        margin-bottom: 5rem;
+        padding: 3rem 25% 0;
+    }
+}
+
+@include bootstrapTab();
+@include mobileView();

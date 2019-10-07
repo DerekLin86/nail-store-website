@@ -1,0 +1,24 @@
+@import '../share/scss/highlight.scss';
+
+::ng-deep .price {
+    &-subtitle {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-content-block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    &-sub-text {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    &-gap {
+        height: 1rem;
+        width: 100%;
+    }
+    &-margin {
+        margin-left: 0.25rem;
+    }
+}

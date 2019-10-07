@@ -1,0 +1,19 @@
+<div class="index-branding-block">
+  <span>Feb.14 Nail</span>
+</div>
+<div class="index-body-block">
+    <div class="index-body-tab-block">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+          <a *ngFor="let tab of viewModelSetting.tabList | async;"
+            class="flex-sm-fill text-sm-center nav-link index-body-tab"
+            (click)="selectTabByEvent($event, tab.text)"
+            #tabItem
+          >
+            {{ tab.text }}
+          </a>
+        </nav>
+    </div>
+    <div class="index-content-block">
+      <ng-container *ngComponentOutlet="viewModelSetting.currentComponent;"></ng-container>
+    </div>
+</div>
